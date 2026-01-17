@@ -4,6 +4,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Collections from './pages/Collections';
+import CategoryPage from './pages/Collections/CategoryPage';
+import ListingPage from './pages/Collections/ListingPage';
+import ProductDetail from './pages/Collections/ProductDetail';
 import Projects from './pages/Projects';
 import Store from './pages/Store';
 import Contacts from './pages/Contacts';
@@ -26,8 +29,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          
+          {/* Collections Routes - Multi-level navigation */}
           <Route path="/collections" element={<Collections />} />
-          <Route path="/collections/:category" element={<Collections />} />
+          <Route path="/collections/:category" element={<CategoryPage />} />
+          <Route path="/collections/:category/:subcategory" element={<ListingPage />} />
+          <Route path="/collections/:category/:subcategory/:item" element={<ProductDetail />} />
+          
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:slug" element={<Projects />} />
           <Route path="/store" element={<Store />} />

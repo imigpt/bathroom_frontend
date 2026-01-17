@@ -1,139 +1,51 @@
-import { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import Header from '../../components/Header';
+import { Link } from 'react-router-dom';
+import { getCategories } from '../../data/collectionsData';
 import './Collections.css';
 
 const Collections = () => {
-  const { category } = useParams();
-  const [activeCategory, setActiveCategory] = useState(category || 'all');
-
-  const categories = [
-    { id: 'all', label: 'All Collections' },
-    { id: 'kitchens', label: 'Kitchens' },
-    { id: 'bathrooms', label: 'Bathrooms' },
-    { id: 'wardrobes', label: 'Wardrobes and Systems' },
-    { id: 'complementary', label: 'Complementary items' },
-  ];
-
-  const products = [
-    {
-      id: 1,
-      name: 'K2',
-      category: 'kitchens',
-      designer: 'Norbert Wangen',
-      image: '/images/products/k2.jpg',
-      link: '/product/k2',
-    },
-    {
-      id: 2,
-      name: 'Code',
-      category: 'kitchens',
-      designer: 'Piero Lissoni',
-      image: '/images/products/code.jpg',
-      link: '/product/code',
-    },
-    {
-      id: 3,
-      name: 'Xila',
-      category: 'kitchens',
-      designer: 'Luigi Massoni',
-      image: '/images/products/xila.jpg',
-      link: '/product/xila',
-    },
-    {
-      id: 4,
-      name: 'Sabbia',
-      category: 'bathrooms',
-      designer: 'Naoto Fukasawa',
-      image: '/images/products/sabbia.jpg',
-      link: '/product/sabbia',
-    },
-    {
-      id: 5,
-      name: 'Minimal',
-      category: 'bathrooms',
-      designer: 'Giulio Gianturco',
-      image: '/images/products/minimal.jpg',
-      link: '/product/minimal',
-    },
-    {
-      id: 6,
-      name: 'Antibes',
-      category: 'wardrobes',
-      designer: 'Piero Lissoni',
-      image: '/images/products/antibes.jpg',
-      link: '/product/antibes',
-    },
-    {
-      id: 7,
-      name: 'Storage',
-      category: 'wardrobes',
-      designer: 'Boffi Studio',
-      image: '/images/products/storage.jpg',
-      link: '/product/storage',
-    },
-    {
-      id: 8,
-      name: 'Pipe',
-      category: 'complementary',
-      designer: 'Marcel Wanders',
-      image: '/images/products/pipe.jpg',
-      link: '/product/pipe',
-    },
-  ];
-
-  const filteredProducts = activeCategory === 'all'
-    ? products
-    : products.filter(product => product.category === activeCategory);
-
-  useEffect(() => {
-    if (category) {
-      setActiveCategory(category);
-    }
-  }, [category]);
+  const categories = getCategories();
 
   return (
-    <div className="page page--collections">
-      <Header />
-      
-      <main className="main">
-        {/* Hero Section */}
-        <section className="collections-hero">
-          <h1>Collections</h1>
-        </section>
+    <div className="collections-page">
+      {/* Hero Section */}
+      <section className="collections-hero">
+        <div className="collections-hero__content">
+          <h1 className="collections-hero__title">Collections</h1>
+          <p className="collections-hero__description">
+            Discover our complete range of luxury kitchens, bathrooms, wardrobes, and complementary items.
+          </p>
+        </div>
+      </section>
 
-        {/* Filter Tabs */}
-        <section className="collections-filter">
-          <div className="collections-filter__container">
-            {categories.map(cat => (
-              <button
-                key={cat.id}
-                className={`filter-tab ${activeCategory === cat.id ? 'active' : ''}`}
-                onClick={() => setActiveCategory(cat.id)}
+      {/* Categories Grid */}
+      <section className="collections-categories">
+        <div className="collections-categories__container">
+          <div className="collections-categories__grid">
+            {categories.map((category) => (
+              <Link
+                key={category.id}
+                to={`/collections/${category.slug}`}
+                className="category-tile"
               >
-                {cat.label}
-              </button>
-            ))}
-          </div>
-        </section>
-
-        {/* Products Grid */}
-        <section className="collections-grid-section">
-          <div className="collections-grid">
-            {filteredProducts.map(product => (
-              <Link key={product.id} to={product.link} className="product-card">
-                <div className="product-card__image">
-                  <img src={product.image} alt={product.name} />
+                <div className="category-tile__image">
+                  <img src={category.image} alt={category.name} />
+                  <div className="category-tile__overlay"></div>
                 </div>
-                <div className="product-card__info">
-                  <h3 className="product-card__name">{product.name}</h3>
-                  <p className="product-card__designer">{product.designer}</p>
+                <div className="category-tile__content">
+                  <h2 className="category-tile__title">{category.name}</h2>
+                  <p className="category-tile__description">{category.description}</p>
+                  <span className="category-tile__link">
+                    Explore Collection
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
                 </div>
               </Link>
             ))}
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </div>
   );
 };

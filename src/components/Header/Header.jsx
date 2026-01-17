@@ -1,44 +1,21 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import MegaMenu from '../MegaMenu/MegaMenu';
 import './Header.css';
 
 const Header = () => {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMobileSubmenu, setActiveMobileSubmenu] = useState(null);
+  const [collectionsMenuOpen, setCollectionsMenuOpen] = useState(false);
   const location = useLocation();
 
   const mainNavItems = [
     {
       id: 'collections',
       label: 'Collections',
-      hasSubmenu: true,
-      submenu: {
-        column1: [
-          { label: 'Kitchens', path: '/collection/kitchens' },
-          { label: 'Bathrooms', path: '/collection/bathrooms' },
-          { label: 'Wardrobes and Systems', path: '/collection/wardrobes' },
-          { label: 'Complementary items', path: '/collection/complementary' },
-        ],
-        column2: [
-          { label: 'Indoor Kitchens', path: '/collection/kitchens/indoor' },
-          { label: 'Outdoor Kitchens', path: '/collection/kitchens/outdoor' },
-          { label: 'Kitchen additions', path: '/collection/kitchens/additions' },
-          { label: 'Accessories', path: '/collection/kitchens/accessories' },
-        ],
-        featured: [
-          { 
-            image: '/images/categories/cucine.jpg', 
-            title: 'K2', 
-            path: '/product/k2' 
-          },
-          { 
-            image: '/images/categories/bagni.jpg', 
-            title: 'Code', 
-            path: '/product/code' 
-          },
-        ],
-      },
+      hasSubmenu: false,
+      isMegaMenu: true,
     },
     {
       id: 'about',
@@ -140,7 +117,17 @@ const Header = () => {
                     onMouseEnter={() => item.hasSubmenu && handleMouseEnter(item.id)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    {item.path ? (
+                    {item.isMegaMenu ? (
+                      <a 
+                        href="#" 
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setCollectionsMenuOpen(true);
+                        }}
+                      >
+                        {item.label}
+                      </a>
+                    ) : item.path ? (
                       <Link to={item.path}>{item.label}</Link>
                     ) : (
                       <a href="#" onClick={(e) => e.preventDefault()}>
@@ -361,6 +348,12 @@ const Header = () => {
           setMobileMenuOpen(false);
         }}
       ></div>
+
+      {/* Collections Mega Menu */}
+      <MegaMenu 
+        isOpen={collectionsMenuOpen} 
+        onClose={() => setCollectionsMenuOpen(false)} 
+      />
     </>
   );
 };
