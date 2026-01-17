@@ -98,7 +98,7 @@ const News = () => {
         {/* Hero */}
         <section className="news-hero">
           <h1>News & Events</h1>
-          <p>Stay updated with the latest from Boffi</p>
+          <p>Stay updated with the latest from Signature</p>
         </section>
 
         {/* Category Filter */}

@@ -8,25 +8,25 @@ export const HistorySection = () => {
     {
       id: 1,
       title: 'Kitchens',
-      image: '/images/categories/cucine.jpg',
+      image: '/images/hero/Kitchen.jpg',
       link: '/collection/kitchens',
     },
     {
       id: 2,
       title: 'Bathrooms',
-      image: '/images/categories/bagni.jpg',
+      image: '/images/categories/Bathroom.jpg',
       link: '/collection/bathrooms',
     },
     {
       id: 3,
       title: 'Wardrobes and Systems',
-      image: '/images/categories/armadi.jpg',
+      image: '/images/categories/Wardrobe.jpg',
       link: '/collection/wardrobes',
     },
     {
       id: 4,
       title: 'Complementary items',
-      image: '/images/categories/complementi.jpg',
+      image: '/images/categories/COMPLEMENTI-DI-ARREDO_1080X1350.jpg',
       link: '/collection/complementary',
     },
   ];
@@ -38,7 +38,7 @@ export const HistorySection = () => {
     <section className="section history-section">
       <div className="section__container">
         <h2 className="section__title section__title--large">
-          The history of Design <br /> is the History of Boffi
+          The history of Design <br /> is the History of Signature
         </h2>
         
         <div className="category-carousel">
@@ -89,7 +89,7 @@ export const AWayOfLivingSection = () => {
             controls
             controlsList="nodownload"
           >
-            <source src="/videos/awol-2025.mp4" type="video/mp4" />
+            <source src="/videos/video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -104,13 +104,13 @@ export const ProjectsSection = () => {
     {
       id: 1,
       title: 'Mougins, France',
-      image: '/images/projects/mougins.jpg',
+      image: '/images/projects/project1.jpg',
       link: '/project/mougins-france',
     },
     {
       id: 2,
       title: 'New York, USA',
-      image: '/images/projects/new-york.jpg',
+      image: '/images/projects/project2.jpg',
       link: '/project/new-york-usa',
     },
   ];
@@ -257,7 +257,7 @@ export const PhilosophySection = () => {
         <h2 className="section__title">Philosophy</h2>
         
         <p className="philosophy-text">
-          Boffi is dedicated to finding new approaches to interior living and
+          Signature is dedicated to finding new approaches to interior living and
           functionalities to improve daily life in the home.
         </p>
 

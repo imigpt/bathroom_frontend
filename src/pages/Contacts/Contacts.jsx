@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import './Contacts.css';
 
 const Contacts = () => {
@@ -53,10 +52,10 @@ const Contacts = () => {
                 <div className="contact-detail">
                   <h3>Headquarters</h3>
                   <p>
-                    Boffi S.p.A.<br />
-                    Via Oberdan, 70<br />
-                    20823 Lentate sul Seveso (MB)<br />
-                    Italy
+                    Signature (BATH & KITCHENS LTD)<br />
+                    123 Design Street,<br />
+                    London, UK<br />
+                    United Kingdom
                   </p>
                 </div>
                 
@@ -70,7 +69,7 @@ const Contacts = () => {
                 <div className="contact-detail">
                   <h3>Email</h3>
                   <p>
-                    <a href="mailto:info@boffi.com">info@boffi.com</a>
+                    <a href="mailto:info@signaturebk.com">info@signaturebk.com</a>
                   </p>
                 </div>
               </div>

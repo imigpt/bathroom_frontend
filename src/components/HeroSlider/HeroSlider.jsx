@@ -19,7 +19,7 @@ const HeroSlider = () => {
         'Kitchens that create a visual experience via projects designed to become architectural statements.',
       buttonText: 'Discover More',
       buttonLink: '/collection/kitchens',
-      backgroundImage: '/images/hero/kitchen-hero.jpg',
+      backgroundImage: '/images/hero/Kitchen.jpg',
       backgroundVideo: null,
     },
     {
@@ -29,17 +29,17 @@ const HeroSlider = () => {
         'Rational bathroom design moves away from rigid aesthetic by focusing on comfort, space and well-balanced functionality.',
       buttonText: 'Discover More',
       buttonLink: '/collection/bathrooms',
-      backgroundImage: '/images/hero/bathroom-hero.jpg',
+      backgroundImage: '/images/hero/Bathroom.jpg',
       backgroundVideo: null,
     },
     {
       id: 3,
       heading: 'WARDROBE',
       description:
-        'From bookshelves to wardrobes, Boffi systems are available in a range of compositions to create unique living solutions.',
+        'From bookshelves to wardrobes, Signature systems are available in a range of compositions to create unique living solutions.',
       buttonText: 'Discover More',
       buttonLink: '/collection/wardrobes',
-      backgroundImage: '/images/hero/wardrobe-hero.jpg',
+      backgroundImage: '/images/hero/Wardrobe.jpg',
       backgroundVideo: null,
     },
   ];
@@ -47,7 +47,7 @@ const HeroSlider = () => {
   return (
     <section className="hero-slider">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        modules={[Pagination, Autoplay, EffectFade]}
         spaceBetween={0}
         slidesPerView={1}
         navigation

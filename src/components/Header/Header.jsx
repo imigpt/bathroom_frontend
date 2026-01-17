@@ -126,7 +126,7 @@ const Header = () => {
             {/* Logo */}
             <div className="header__logo">
               <Link to="/">
-                <img src="/images/logo/boffi-logo.svg" alt="Boffi Logo" />
+                <img src="/signature-logo-removebg-preview (2).png" alt="Signature Bath & Kitchens Ltd" />
               </Link>
             </div>
 
@@ -152,9 +152,19 @@ const Header = () => {
               </ul>
             </nav>
 
-            {/* Search Icon */}
-            <div className="search-icon__container">
-              <img src="/images/icons/search.svg" alt="Search" />
+            {/* Search Bar */}
+            <div className="search-container">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="search-input"
+              />
+              <button className="search-button" aria-label="Search">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
             </div>
           </div>
 
@@ -268,12 +278,22 @@ const Header = () => {
 
           <div className="header__logo">
             <Link to="/">
-              <img src="/images/logo/boffi-logo.svg" alt="Boffi Logo" />
+              <img src="/signature-logo-removebg-preview.png" alt="Signature Bath & Kitchens Ltd" />
             </Link>
           </div>
 
-          <div className="search-icon__container">
-            <img src="/images/icons/search.svg" alt="Search" />
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+            />
+            <button className="search-button" aria-label="Search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
           </div>
         </div>
 

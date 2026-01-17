@@ -1,5 +1,4 @@
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import './About.css';
 
 const About = () => {
@@ -77,7 +76,7 @@ const About = () => {
                 <div className="timeline__year">2000s</div>
                 <div className="timeline__content">
                   <h3>Global Expansion</h3>
-                  <p>Opening of showrooms worldwide, establishing Boffi as a global luxury brand.</p>
+                  <p>Opening of showrooms worldwide, establishing Signature as a leading luxury brand.</p>
                 </div>
               </div>
               <div className="timeline__item">
@@ -116,8 +115,6 @@ const About = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

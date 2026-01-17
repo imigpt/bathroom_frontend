@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import './Store.css';
 
 const Store = () => {
@@ -79,7 +78,7 @@ const Store = () => {
         {/* Hero */}
         <section className="store-hero">
           <h1>Store Locator</h1>
-          <p>Find a Boffi showroom near you</p>
+          <p>Find a Signature showroom near you</p>
         </section>
 
         {/* Filters */}

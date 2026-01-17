@@ -31,3 +31,9 @@
     transform: translateY(0);
   }
 }
+
+/* Hide specific sections */
+.catalogues-section,
+.news-section {
+  display: none;
+}

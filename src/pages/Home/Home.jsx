@@ -1,5 +1,4 @@
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import HeroSlider from '../../components/HeroSlider';
 import {
   HistorySection,
@@ -27,8 +26,6 @@ const Home = () => {
         <PhilosophySection />
         <BoffiDePadovaSection />
       </main>
-
-      <Footer />
     </div>
   );
 };
