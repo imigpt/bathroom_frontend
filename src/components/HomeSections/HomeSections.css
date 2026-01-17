@@ -1,0 +1,407 @@
+/* ========================================
+   HOME SECTIONS STYLES
+   ======================================== */
+
+/* Section Common Styles */
+.section {
+  padding: 40px 20px 60px;
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-section);
+}
+
+@media (min-width: 992px) {
+  .section {
+    padding: 60px 20px 80px;
+  }
+}
+
+.section__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 40px 0;
+}
+
+@media (min-width: 992px) {
+  .section__title {
+    font-size: 32px;
+    padding: 60px 0;
+  }
+}
+
+.section__title--large {
+  font-size: 28px;
+}
+
+@media (min-width: 992px) {
+  .section__title--large {
+    font-size: 36px;
+  }
+}
+
+.section__cta {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* ======================================== 
+   HISTORY SECTION - Category Carousel
+   ======================================== */
+
+.history-section .section__title br {
+  display: block;
+}
+
+.category-carousel {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  .category-carousel {
+    margin-bottom: 70px;
+  }
+}
+
+.category-carousel__track {
+  display: flex;
+  gap: 20px;
+  animation: scrollCarousel 30s linear infinite;
+}
+
+.category-carousel__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.category-card {
+  flex-shrink: 0;
+  width: 280px;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .category-card {
+    width: 350px;
+  }
+}
+
+.category-card__image {
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.category-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.category-card:hover .category-card__image img {
+  transform: scale(1.05);
+}
+
+.category-card__title {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  padding-top: 10px;
+  margin-top: 5px;
+}
+
+/* ======================================== 
+   A WAY OF LIVING SECTION - Video
+   ======================================== */
+
+.awol-section .video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.awol-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======================================== 
+   PROJECTS SECTION - Grid
+   ======================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  cursor: pointer;
+}
+
+.project-card__image {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-card__image img {
+  transform: scale(1.05);
+}
+
+.project-card__title {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 0 5px;
+}
+
+@media (min-width: 992px) {
+  .project-card__title {
+    padding: 20px 0 5px;
+  }
+}
+
+/* ======================================== 
+   CATALOGUES SECTION - Grid
+   ======================================== */
+
+.catalogues-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding-bottom: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .catalogues-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.catalogue-card {
+  cursor: pointer;
+}
+
+.catalogue-card__image {
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.catalogue-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.catalogue-card:hover .catalogue-card__image img {
+  transform: scale(1.05);
+}
+
+.catalogue-card__title {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* ======================================== 
+   NEWS SECTION - Grid
+   ======================================== */
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.news-card {
+  cursor: pointer;
+}
+
+.news-card__image {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.news-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.news-card:hover .news-card__image img {
+  transform: scale(1.05);
+}
+
+.news-card__content {
+  padding-top: 15px;
+}
+
+.news-card__title {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.news-card__excerpt {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* ======================================== 
+   PHILOSOPHY SECTION
+   ======================================== */
+
+.philosophy-section .philosophy-text {
+  font-family: var(--font-times);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 300;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+@media (min-width: 992px) {
+  .philosophy-section .philosophy-text {
+    font-size: 24px;
+  }
+}
+
+/* ======================================== 
+   BOFFI DEPADOVA SECTION - Brand Cards
+   ======================================== */
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.brand-card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-card__image {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.brand-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.brand-card:hover .brand-card__image img {
+  transform: scale(1.05);
+}
+
+.brand-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.brand-card:hover .brand-card__overlay {
+  opacity: 1;
+}
+
+.brand-card__name {
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ======================================== 
+   FADE IN ANIMATION
+   ======================================== */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

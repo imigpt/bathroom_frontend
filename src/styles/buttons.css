@@ -1,0 +1,142 @@
+/* ========================================
+   BOFFI WEBSITE - BUTTON STYLES
+   ======================================== */
+
+/* Primary Button */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 1px solid var(--color-black);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.button:hover {
+  color: var(--color-black);
+  background-color: transparent;
+}
+
+/* Button Black Text (outlined) */
+.button.text--black {
+  color: var(--color-black);
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+}
+
+.button.text--black:hover {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+/* Button White */
+.button--white {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+.button--white:hover {
+  color: var(--color-white);
+  background-color: transparent;
+}
+
+/* Slide Button (used in hero slider) */
+.slide-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.slide-button:hover {
+  background-color: var(--color-background);
+}
+
+/* Small Button */
+.button--sm {
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
+/* Large Button */
+.button--lg {
+  padding: 16px 32px;
+  font-size: 14px;
+}
+
+/* Full Width Button */
+.button--full {
+  width: 100%;
+}
+
+/* Disabled Button */
+.button:disabled,
+.button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Icon Button */
+.button--icon {
+  padding: 10px;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+/* Link Button */
+.button--link {
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.button--link:hover {
+  color: var(--color-text-secondary);
+}
+
+/* Navigation Arrow Buttons */
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.nav-button:hover {
+  background-color: var(--color-white);
+}
+
+.nav-button svg {
+  width: 24px;
+  height: 24px;
+}

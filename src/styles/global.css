@@ -1,0 +1,182 @@
+/* ========================================
+   BOFFI WEBSITE - GLOBAL STYLES
+   ======================================== */
+
+@import './variables.css';
+
+/* Font Face Declarations */
+@font-face {
+  font-family: "NeueHaasGrotText-55Roman";
+  src: url('/fonts/NeueHaasGrotText-55Roman-Web.woff2') format('woff2'),
+       url('/fonts/NeueHaasGrotText-55Roman-Web.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-text-primary);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Input Reset */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: var(--line-height-tight);
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-20);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Display Utilities */
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+
+/* Flexbox Utilities */
+.flex-wrap { flex-wrap: wrap; }
+.align-items-center { align-items: center; }
+.justify-content-center { justify-content: center; }
+.justify-content-between { justify-content: space-between; }
+.flex-column { flex-direction: column; }
+.gap-10 { gap: 10px; }
+.gap-20 { gap: 20px; }
+
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Spacing Utilities */
+.px-20 { padding-left: 20px; padding-right: 20px; }
+.py-20 { padding-top: 20px; padding-bottom: 20px; }
+.py-40 { padding-top: 40px; padding-bottom: 40px; }
+.py-60 { padding-top: 60px; padding-bottom: 60px; }
+.pt-10 { padding-top: 10px; }
+.pt-20 { padding-top: 20px; }
+.pt-40 { padding-top: 40px; }
+.pt-60 { padding-top: 60px; }
+.pb-20 { padding-bottom: 20px; }
+.pb-40 { padding-bottom: 40px; }
+.pb-60 { padding-bottom: 60px; }
+.mb-5 { margin-bottom: 5px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+
+/* Shadow */
+.shadow {
+  box-shadow: var(--shadow-section);
+}
+
+/* Responsive Display */
+@media (max-width: 767px) {
+  .d-lg-block { display: none !important; }
+  .d-lg-flex { display: none !important; }
+  .d-mobile-none { display: none !important; }
+}
+
+@media (min-width: 768px) {
+  .d-mobile-block { display: none !important; }
+  .d-lg-block { display: block !important; }
+  .d-lg-flex { display: flex !important; }
+}
+
+@media (min-width: 992px) {
+  .py-lg-60 { padding-top: 60px; padding-bottom: 60px; }
+  .py-lg-80 { padding-top: 80px; padding-bottom: 80px; }
+  .pt-lg-60 { padding-top: 60px; }
+  .pb-lg-60 { padding-bottom: 60px; }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}

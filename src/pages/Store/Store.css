@@ -1,0 +1,161 @@
+/* ========================================
+   STORE LOCATOR PAGE STYLES
+   ======================================== */
+
+.page--store .main {
+  padding-top: var(--header-height);
+}
+
+/* Hero */
+.store-hero {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--color-background);
+}
+
+.store-hero h1 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
+}
+
+.store-hero p {
+  font-family: var(--font-times);
+  font-size: 18px;
+  color: var(--color-text-secondary);
+}
+
+/* Filters */
+.store-filters {
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  padding: 30px 20px;
+}
+
+.store-filters__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 12px 15px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+}
+
+.filter-group select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Stores List */
+.stores-list {
+  padding: 40px 20px 80px;
+  background-color: var(--color-background);
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .stores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .stores-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Store Card */
+.store-card {
+  background-color: var(--color-background-secondary);
+}
+
+.store-card__image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.store-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.store-card:hover .store-card__image img {
+  transform: scale(1.05);
+}
+
+.store-card__info {
+  padding: 20px;
+}
+
+.store-card__name {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.store-card__address {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 10px;
+}
+
+.store-card__phone,
+.store-card__email {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.store-card__phone a,
+.store-card__email a {
+  color: var(--color-text-primary);
+}
+
+.store-card__phone a:hover,
+.store-card__email a:hover {
+  text-decoration: underline;
+}
