@@ -30,7 +30,7 @@ const Header = () => {
       hasSubmenu: true,
       submenu: {
         column1: [
-          { label: 'Boffi', path: '/about' },
+          { label: 'Signature', path: '/about' },
           { label: 'De Padova', path: 'https://www.depadova.com', external: true },
           { label: 'ADL', path: 'https://www.adl.it', external: true },
         ],

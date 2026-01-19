@@ -18,7 +18,7 @@ const HeroSlider = () => {
       description:
         'Our kitchens offer a visual experience through thoughtfully designed Bundles that stand as bold architectural statements.',
       buttonText: 'Discover More',
-      buttonLink: '/collection/kitchens',
+      buttonLink: '/collections/kitchens',
       backgroundImage: '/images/hero/Kitchen.jpg',
       backgroundVideo: null,
     },
@@ -28,7 +28,7 @@ const HeroSlider = () => {
       description:
         'Our bathroom designs prioritise comfort and spatial ease, moving away from rigid aesthetics to achieve a thoughtful balance of form and function.',
       buttonText: 'Discover More',
-      buttonLink: '/collection/bathrooms',
+      buttonLink: '/collections/bathrooms',
       backgroundImage: '/images/hero/Bathroom.jpg',
       backgroundVideo: null,
     },
