@@ -16,7 +16,7 @@ const HeroSlider = () => {
       id: 1,
       heading: 'KITCHENS',
       description:
-        'Kitchens that create a visual experience via projects designed to become architectural statements.',
+        'Our kitchens offer a visual experience through thoughtfully designed Bundles that stand as bold architectural statements.',
       buttonText: 'Discover More',
       buttonLink: '/collection/kitchens',
       backgroundImage: '/images/hero/Kitchen.jpg',
@@ -26,22 +26,22 @@ const HeroSlider = () => {
       id: 2,
       heading: 'BATHROOMS',
       description:
-        'Rational bathroom design moves away from rigid aesthetic by focusing on comfort, space and well-balanced functionality.',
+        'Our bathroom designs prioritise comfort and spatial ease, moving away from rigid aesthetics to achieve a thoughtful balance of form and function.',
       buttonText: 'Discover More',
       buttonLink: '/collection/bathrooms',
       backgroundImage: '/images/hero/Bathroom.jpg',
       backgroundVideo: null,
     },
-    {
-      id: 3,
-      heading: 'WARDROBE',
-      description:
-        'From bookshelves to wardrobes, Signature systems are available in a range of compositions to create unique living solutions.',
-      buttonText: 'Discover More',
-      buttonLink: '/collection/wardrobes',
-      backgroundImage: '/images/hero/Wardrobe.jpg',
-      backgroundVideo: null,
-    },
+    // {
+    //   id: 3,
+    //   heading: 'WARDROBE',
+    //   description:
+    //     'From bookshelves to wardrobes, Signature systems are available in a variety of configurations, allowing the creation of unique and personalised living solutions.',
+    //   buttonText: 'Discover More',
+    //   buttonLink: '/collection/wardrobes',
+    //   backgroundImage: '/images/hero/Wardrobe.jpg',
+    //   backgroundVideo: null,
+    // },
   ];
 
   return (

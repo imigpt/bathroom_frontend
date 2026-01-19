@@ -13,6 +13,9 @@ import Contacts from './pages/Contacts';
 import Catalogues from './pages/Catalogues';
 import News from './pages/News';
 import Login from './pages/Login';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiePolicy from './pages/CookiePolicy';
+import TermsConditions from './pages/TermsConditions';
 
 // Import global styles
 import './styles/variables.css';
@@ -44,6 +47,9 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/news/:slug" element={<News />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
         </Routes>
         <Footer />
       </div>

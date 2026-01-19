@@ -38,13 +38,13 @@ const Header = () => {
     },
     {
       id: 'projects',
-      label: 'Projects',
+      label: 'Bundles',
       hasSubmenu: true,
       submenu: {
         column1: [
           { label: 'Residential', path: '/projects?type=residential' },
           { label: 'Hospitality', path: '/projects?type=hospitality' },
-          { label: 'All Projects', path: '/projects' },
+          { label: 'All Bundles', path: '/projects' },
         ],
       },
     },
@@ -56,12 +56,7 @@ const Header = () => {
     },
   ];
 
-  const quickNavItems = [
-    { label: 'Store', path: '/store' },
-    { label: 'Catalogues', path: '/catalogues' },
-    { label: 'News', path: '/news' },
-    { label: 'Login', path: '/login', external: true },
-  ];
+  const quickNavItems = [];
 
   const languages = [
     { code: 'en', label: 'English' },
