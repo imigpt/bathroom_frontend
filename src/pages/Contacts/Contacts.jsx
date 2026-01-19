@@ -69,9 +69,7 @@ const Contacts = () => {
         <div className="contacts-header__container">
           <h1 className="contacts-header__title">CONTACTS</h1>
           <p className="contacts-header__description">
-            We are here to assist you with any inquiries regarding our luxury collections, 
-            bespoke design services, or project collaborations. Our team is dedicated to 
-            providing exceptional support and personalized consultation.
+            Whether you are exploring our collections or planning a bespoke project, our team is ready to assist with expert advice and dedicated support tailored to your needs.
           </p>
         </div>
       </section>
