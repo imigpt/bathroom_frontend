@@ -140,11 +140,17 @@ const DynamicForm = ({
               className={`dynamic-form__select ${value ? 'has-value' : ''}`}
             >
               <option value="">{placeholder || `Select ${label}`}</option>
-              {options?.map((option, idx) => (
-                <option key={idx} value={option}>
-                  {option}
-                </option>
-              ))}
+              {options?.map((option, idx) => {
+                // Clean whitespace and format numbers with commas for display
+                const cleanOption = option.trim();
+                // Add thousand separators to numbers (e.g., 5000 -> 5,000)
+                const displayOption = cleanOption.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                return (
+                  <option key={idx} value={cleanOption}>
+                    {displayOption}
+                  </option>
+                );
+              })}
             </select>
             {error && <span className="dynamic-form__error">{error}</span>}
           </div>
