@@ -6,14 +6,14 @@ export const collectionsData = {
     id: 'kitchens',
     name: 'Kitchens',
     slug: 'kitchens',
-    description: 'Discover our collection of luxury kitchens, designed with precision and crafted from the finest materials.',
+    description: 'Explore our luxury kitchen collections, defined by precision, quality craftsmanship, and refined materials.',
     image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200',
     subcategories: {
       'indoor-kitchens': {
         id: 'indoor-kitchens',
         name: 'Indoor Kitchens',
         slug: 'indoor-kitchens',
-        description: 'Elegant indoor kitchen solutions that blend functionality with sophisticated design.',
+        description: 'Thoughtfully designed indoor kitchens combining practicality with sophisticated aesthetics.',
         image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800',
         items: [
           {
@@ -114,7 +114,7 @@ export const collectionsData = {
         id: 'outdoor-kitchens',
         name: 'Outdoor Kitchens',
         slug: 'outdoor-kitchens',
-        description: 'Weather-resistant outdoor kitchen solutions designed for alfresco dining experiences.',
+        description: 'Outdoor kitchen solutions designed to perform beautifully in every season.',
         image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
         items: [
           {
@@ -167,7 +167,7 @@ export const collectionsData = {
         id: 'kitchen-additions',
         name: 'Kitchen Additions',
         slug: 'kitchen-additions',
-        description: 'Complementary elements to enhance your kitchen experience.',
+        description: 'Finishing elements designed to enrich the way you use your kitchen.',
         image: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800',
         items: [
           {
@@ -216,7 +216,7 @@ export const collectionsData = {
         id: 'kitchen-accessories',
         name: 'Kitchen Accessories',
         slug: 'kitchen-accessories',
-        description: 'Premium accessories to complete your kitchen design.',
+        description: 'Premium kitchen accessories crafted to elevate both function and style.',
         image: 'https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=800',
         items: [
           {
@@ -267,14 +267,14 @@ export const collectionsData = {
     id: 'bathrooms',
     name: 'Bathrooms',
     slug: 'bathrooms',
-    description: 'Luxurious bathroom solutions that transform daily rituals into extraordinary experiences.',
+    description: 'Refined bathroom designs that elevate everyday routines into moments of comfort and calm.',
     image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200',
     subcategories: {
       'bathroom-models': {
         id: 'bathroom-models',
         name: 'Bathroom Models',
         slug: 'bathroom-models',
-        description: 'Complete bathroom systems designed for ultimate comfort and style.',
+        description: 'Thoughtfully designed bathroom models that balance elegance and everyday comfort.',
         image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800',
         items: [
           {
@@ -347,7 +347,7 @@ export const collectionsData = {
         id: 'bath-additions',
         name: 'Bath Additions',
         slug: 'bath-additions',
-        description: 'Standalone bathtubs, showers, and wellness elements.',
+        description: 'Bathtubs, showers, and wellness components designed to elevate the bathroom experience.',
         image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800',
         items: [
           {
@@ -398,7 +398,7 @@ export const collectionsData = {
         id: 'bath-accessories',
         name: 'Bath Accessories',
         slug: 'bath-accessories',
-        description: 'Refined accessories to complete your bathroom sanctuary.',
+        description: 'Carefully curated bathroom accessories designed for comfort and style.',
         image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800',
         items: [
           {
@@ -445,115 +445,19 @@ export const collectionsData = {
       }
     }
   },
-  'wardrobes-systems': {
-    id: 'wardrobes-systems',
-    name: 'Wardrobes and Systems',
-    slug: 'wardrobes-systems',
-    description: 'Bespoke wardrobe solutions and storage systems that bring order and elegance to your living spaces.',
-    image: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=1200',
-    subcategories: null, // No subcategories - direct listing
-    items: [
-      {
-        id: 'antibes',
-        name: 'Antibes',
-        slug: 'antibes',
-        isNew: true,
-        thumbnail: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=600',
-        heroImage: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=1400',
-        description: 'Antibes wardrobe system features glass doors with aluminum frames, creating a showcase for your wardrobe while maintaining organization.',
-        galleryImages: [
-          'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800',
-          'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=800'
-        ],
-        technicalDetails: {
-          materials: 'Aluminum frame, tempered glass, wood interior',
-          dimensions: 'Custom configurations',
-          finishes: 'Anodized aluminum, tinted glass options',
-          features: 'LED lighting, soft-close, modular interior'
-        },
-        relatedProjects: [
-          { image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600', name: 'French Riviera Estate' }
-        ]
-      },
-      {
-        id: 'storage',
-        name: 'Storage',
-        slug: 'storage',
-        isNew: false,
-        thumbnail: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600',
-        heroImage: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=1400',
-        description: 'Comprehensive storage system that can be configured for any space - from walk-in closets to living room libraries.',
-        galleryImages: [
-          'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=800',
-          'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800'
-        ],
-        technicalDetails: {
-          materials: 'Solid wood, lacquered panels',
-          dimensions: 'Fully customizable',
-          finishes: 'Matte lacquer, wood veneers',
-          features: 'Adjustable shelving, pull-out elements'
-        },
-        relatedProjects: [
-          { image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600', name: 'Swiss Chalet' }
-        ]
-      },
-      {
-        id: 'pier',
-        name: 'Pier',
-        slug: 'pier',
-        isNew: false,
-        thumbnail: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=600',
-        heroImage: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=1400',
-        description: 'Pier system offers floor-to-ceiling storage with a sophisticated sliding door mechanism that maximizes space efficiency.',
-        galleryImages: [
-          'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800',
-          'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=800'
-        ],
-        technicalDetails: {
-          materials: 'Various options',
-          dimensions: 'Height up to 300cm',
-          finishes: 'Multiple finishes',
-          features: 'Sliding doors, integrated handles'
-        },
-        relatedProjects: []
-      },
-      {
-        id: 'walk-in',
-        name: 'Walk-in System',
-        slug: 'walk-in',
-        isNew: true,
-        thumbnail: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600',
-        heroImage: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=1400',
-        description: 'Transform any room into a luxurious walk-in closet with our comprehensive dressing system, featuring open shelving and display elements.',
-        galleryImages: [
-          'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=800',
-          'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800'
-        ],
-        technicalDetails: {
-          materials: 'Aluminum structure, glass, wood',
-          dimensions: 'Room-based configuration',
-          finishes: 'Customizable',
-          features: 'Island units, seating, mirrors'
-        },
-        relatedProjects: [
-          { image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600', name: 'Beverly Hills Mansion' }
-        ]
-      }
-    ]
-  },
-  'complementary-items': {
-    id: 'complementary-items',
-    name: 'Complementary Items',
-    slug: 'complementary-items',
-    description: 'Curated selection of complementary items that enhance your living environment.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200',
+  'Extra Collection': {
+    id: 'Extra Collection',
+    name: 'Extra Collection',
+    slug: 'Extra Collection',
+    description: 'Curated selection of Extra Collection that enhance your living environment.',
+    image: '/images/categories/celling-fan.jpg',
     subcategories: {
       'ceiling-fans': {
         id: 'ceiling-fans',
         name: 'Ceiling Fans',
         slug: 'ceiling-fans',
         description: 'Designer ceiling fans that combine air circulation with sculptural aesthetics.',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
+        image: '/images/categories/celling-fan.jpg',
         items: [
           {
             id: 'aria',

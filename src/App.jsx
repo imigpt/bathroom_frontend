@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
 import About from './pages/About';
 import Collections from './pages/Collections';
@@ -13,6 +14,10 @@ import Contacts from './pages/Contacts';
 import Catalogues from './pages/Catalogues';
 import News from './pages/News';
 import Login from './pages/Login';
+import Quote from './pages/Quote';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiePolicy from './pages/CookiePolicy';
+import TermsConditions from './pages/TermsConditions';
 
 // Import global styles
 import './styles/variables.css';
@@ -40,12 +45,17 @@ function App() {
           <Route path="/projects/:slug" element={<Projects />} />
           <Route path="/store" element={<Store />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/quote" element={<Quote />} />
           <Route path="/catalogues" element={<Catalogues />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:slug" element={<News />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
         </Routes>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   );

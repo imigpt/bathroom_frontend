@@ -1,34 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import MegaMenu from '../MegaMenu/MegaMenu';
 import './Header.css';
 
 const Header = () => {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMobileSubmenu, setActiveMobileSubmenu] = useState(null);
-  const [collectionsMenuOpen, setCollectionsMenuOpen] = useState(false);
   const location = useLocation();
 
   const mainNavItems = [
     {
+      id: 'home',
+      label: 'Home',
+      path: '/',
+      hasSubmenu: false,
+    },
+    {
       id: 'collections',
       label: 'Collections',
-      hasSubmenu: false,
-      isMegaMenu: true,
+      hasSubmenu: true,
+      submenu: {
+        column1: [
+          { label: 'Kitchens', path: '/collections/kitchens' },
+          { label: 'Bathrooms', path: '/collections/bathrooms' },
+          { label: 'Extra Collection', path: '/collections/extra-collection' },
+        ],
+      },
     },
     {
       id: 'about',
       label: 'About',
-      hasSubmenu: true,
-      submenu: {
-        column1: [
-          { label: 'Philosophy', path: '/about' },
-          { label: 'History', path: '/about/history' },
-          { label: 'Designers', path: '/designers' },
-          { label: 'Sustainability', path: '/about/sustainability' },
-        ],
-      },
+      path: '/about',
+      hasSubmenu: false,
     },
     {
       id: 'brands',
@@ -37,21 +40,21 @@ const Header = () => {
       hasSubmenu: true,
       submenu: {
         column1: [
-          { label: 'Boffi', path: '/about' },
-          { label: 'De Padova', path: 'https://www.depadova.com', external: true },
-          { label: 'ADL', path: 'https://www.adl.it', external: true },
+          { label: 'Signature', path: '/about' },
+          { label: 'Woodera', external: true },
+          { label: 'Versatile', path: '', external: true },
         ],
       },
     },
     {
       id: 'projects',
-      label: 'Projects',
+      label: 'Bundles',
       hasSubmenu: true,
       submenu: {
         column1: [
           { label: 'Residential', path: '/projects?type=residential' },
           { label: 'Hospitality', path: '/projects?type=hospitality' },
-          { label: 'All Projects', path: '/projects' },
+          { label: 'All Bundles', path: '/projects' },
         ],
       },
     },
@@ -63,12 +66,7 @@ const Header = () => {
     },
   ];
 
-  const quickNavItems = [
-    { label: 'Store', path: '/store' },
-    { label: 'Catalogues', path: '/catalogues' },
-    { label: 'News', path: '/news' },
-    { label: 'Login', path: '/login', external: true },
-  ];
+  const quickNavItems = [];
 
   const languages = [
     { code: 'en', label: 'English' },
@@ -117,17 +115,7 @@ const Header = () => {
                     onMouseEnter={() => item.hasSubmenu && handleMouseEnter(item.id)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    {item.isMegaMenu ? (
-                      <a 
-                        href="#" 
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setCollectionsMenuOpen(true);
-                        }}
-                      >
-                        {item.label}
-                      </a>
-                    ) : item.path ? (
+                    {item.path ? (
                       <Link to={item.path}>{item.label}</Link>
                     ) : (
                       <a href="#" onClick={(e) => e.preventDefault()}>
@@ -140,19 +128,7 @@ const Header = () => {
             </nav>
 
             {/* Search Bar */}
-            <div className="search-container">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="search-input"
-              />
-              <button className="search-button" aria-label="Search">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <path d="m21 21-4.35-4.35"></path>
-                </svg>
-              </button>
-            </div>
+            
           </div>
 
           <div className="header__right">
@@ -182,6 +158,11 @@ const Header = () => {
                 ))}
               </div>
             </div>
+
+            {/* Get a Quote Button */}
+            <Link to="/quote" className="quote-button">
+              Get a Quote
+            </Link>
           </div>
         </div>
 
@@ -269,19 +250,9 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="search-container">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="search-input"
-            />
-            <button className="search-button" aria-label="Search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-          </div>
+          <Link to="/quote" className="quote-button">
+            Get a Quote
+          </Link>
         </div>
 
         {/* Mobile Menu */}
@@ -348,12 +319,6 @@ const Header = () => {
           setMobileMenuOpen(false);
         }}
       ></div>
-
-      {/* Collections Mega Menu */}
-      <MegaMenu 
-        isOpen={collectionsMenuOpen} 
-        onClose={() => setCollectionsMenuOpen(false)} 
-      />
     </>
   );
 };

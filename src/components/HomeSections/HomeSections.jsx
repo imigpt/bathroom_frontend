@@ -17,17 +17,17 @@ export const HistorySection = () => {
       image: '/images/categories/Bathroom.jpg',
       link: '/collection/bathrooms',
     },
-    {
-      id: 3,
-      title: 'Wardrobes and Systems',
-      image: '/images/categories/Wardrobe.jpg',
-      link: '/collection/wardrobes',
-    },
+    // {
+    //   id: 3,
+    //   title: 'Wardrobes and Systems',
+    //   image: '/images/categories/Wardrobe.jpg',
+    //   link: '/collection/wardrobes',
+    // },
     {
       id: 4,
-      title: 'Complementary items',
+      title: 'Extra Collection',
       image: '/images/categories/COMPLEMENTI-DI-ARREDO_1080X1350.jpg',
-      link: '/collection/complementary',
+      link: '/collection/Extra Collection',
     },
   ];
 
@@ -38,7 +38,7 @@ export const HistorySection = () => {
     <section className="section history-section">
       <div className="section__container">
         <h2 className="section__title section__title--large">
-          The history of Design <br /> is the History of Signature
+          Design defines our journey <br /> Signature is built on a legacy of thoughtful design.
         </h2>
         
         <div className="category-carousel">
@@ -77,7 +77,7 @@ export const AWayOfLivingSection = () => {
   return (
     <section className="section awol-section">
       <div className="section__container">
-        <h2 className="section__title">A WAY OF LIVING</h2>
+        <h2 className="section__title">Design that defines the way you live</h2>
         
         <div className="video-container">
           <video
@@ -118,7 +118,7 @@ export const ProjectsSection = () => {
   return (
     <section className="section projects-section">
       <div className="section__container">
-        <h2 className="section__title">Projects</h2>
+        <h2 className="section__title">Bundles</h2>
         
         <div className="projects-grid">
           {projects.map((project) => (
@@ -133,7 +133,7 @@ export const ProjectsSection = () => {
 
         <div className="section__cta">
           <Link to="/projects" className="button text--black">
-            Discover all projects
+            Discover all bundles
           </Link>
         </div>
       </div>
@@ -148,7 +148,7 @@ export const CataloguesSection = () => {
       id: 1,
       title: 'New Collections – The Novelties',
       image: '/images/catalogues/new-collections.jpg',
-      downloadUrl: '/catalogues/boffi-new-collections-2025.pdf',
+      downloadUrl: '/catalogues/signature-new-collections-2025.pdf',
     },
     {
       id: 2,
@@ -196,11 +196,11 @@ export const NewsSection = () => {
   const news = [
     {
       id: 1,
-      title: 'The merger: Boffi, De Padova, ADL',
+      title: 'The merger: Signature, Woodera, Versatile',
       excerpt:
-        'Boffi, De Padova and ADL announce their merger into a single company which will take the name of Boffi|DePadova.',
+        'Signature, Woodera and Versatile announce their merger into a single company which will take the name of Boffi|DePadova.',
       image: '/images/news/merger.jpg',
-      link: '/news/merger-boffi-depadova-adl',
+      
     },
     {
       id: 2,
@@ -255,10 +255,9 @@ export const PhilosophySection = () => {
     <section className="section philosophy-section">
       <div className="section__container">
         <h2 className="section__title">Philosophy</h2>
-        
         <p className="philosophy-text">
-          Signature is dedicated to finding new approaches to interior living and
-          functionalities to improve daily life in the home.
+          Design with purpose. Live with intention.
+          We design spaces with meaning—where innovation, comfort, and timeless design come together.
         </p>
 
         <div className="section__cta">
@@ -271,28 +270,26 @@ export const PhilosophySection = () => {
   );
 };
 
-// Boffi DePadova Section (Brands)
-export const BoffiDePadovaSection = () => {
+// Signature Brands Section
+export const BrandsSection = () => {
   const brands = [
     {
       id: 1,
-      name: 'Boffi',
-      image: '/images/brands/boffi.jpg',
+      name: 'Signature',
+      image: '/images/store/signature.jpg',
       link: '/about',
       external: false,
     },
     {
       id: 2,
-      name: 'De Padova',
-      image: '/images/brands/depadova.jpg',
-      link: 'https://www.depadova.com',
+      name: 'Woodera',
+      image: '/images/store/woodera.jpg',
       external: true,
     },
-    {
+    { 
       id: 3,
-      name: 'ADL',
-      image: '/images/brands/adl.jpg',
-      link: 'https://www.adl.it',
+      name: 'Versatile',
+      image: '/images/store/versatile.jpg',
       external: true,
     },
   ];
@@ -300,7 +297,7 @@ export const BoffiDePadovaSection = () => {
   return (
     <section className="section brands-section">
       <div className="section__container">
-        <h2 className="section__title">Boffi|DePadova</h2>
+        <h2 className="section__title">Brands</h2>
         
         <div className="brands-grid">
           {brands.map((brand) =>
